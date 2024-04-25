@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>T-EXTract Image Tool</title>
+        <link rel="shortcut icon" href="#">
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="title">
+                <h1>T-EXTract Image Tool</h1>
+                <a href="#" id="howto-btn">How to use?</a>
+            </div>
+
+            <div id="howto-container" class="modal">
+                <div class="modal-content">
+                    <span id="close-howto" class="close">&times;</span>
+                    <div class="app-info">
+                        <div class="app-desc">
+                            <p>
+                                <span>T-extract Image Tool</span> is a web application designed to transform images into editable text.
+                                This tool uses Optical Character Recognition (OCR) technology to detect, analyze and convert images into digital text
+                                making digitizing scanned, hardcopy or handwritten document, reports or notes from different resources easier.
+                            </p>
+                        </div>
+                        <div class="how-to">
+                            <span>How to use:</span>
+                                <ol>
+                                    <li>Simply upload images by browsing through your device or dragging them on the drop box.</li>
+                                    <li>Click the "Convert" button.</li>
+                                    <li>And wait for the result.</li>
+                                </ol>
+                        </div>
+                        <div class="howto-btn">
+                            <span>Icons:</span>
+                            <ul>
+                                <li>
+                                    <img src="img/copy-w.png" alt="copy-icon">
+                                    - select and copy all text inside the text area.
+                                </li>
+                                <li>
+                                    <img src="img/download-w2.png" alt="download-icon">
+                                    - create and download a text file copy of the result
+                                </li>
+                                <li>
+                                    <img src="img/expand-arrows-w.png" alt="expand-icon">
+                                    - set the size of the text area in full screen
+                                </li>
+                                <li>
+                                    <img src="img/minimize-arrows-w.png" alt="minimize-icon">
+                                    - restore the text area size in default view
+                                </li>
+                                <li>
+                                    <img src="img/close-w.png" alt="remove-icon">
+                                    - remove the selected item
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="crop-container" class="modal">
+                <div class="modal-content">
+                    <span id="close-crop" class="close">&times;</span>
+                    <div class="crop-wrapper">
+                        <div class="image-to-crop-container">
+                            <div id="cropArea">
+                                <div id="topLeft" class="resizeHandle topLeft"></div>
+                                <div id="topRight" class="resizeHandle topRight"></div>
+                                <div id="bottomLeft" class="resizeHandle bottomLeft"></div>
+                                <div id="bottomRight" class="resizeHandle bottomRight"></div>
+                            </div>
+                        </div>
+                        <button id="cropButton" class="crop-btn button">Crop Image</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div id="drop-zone" class="drop-zone maximize-container">
+                <div class="upload-icon maximize-icon"></div>
+                <p class="drop-text">DRAG and DROP Image/s Here</p>
+                <p class="supported-files">Files supported: JPG | PNG | JPEG | GIF | JFIF</p>
+                <input type="file" id="img-upload" class="upload-btn" multiple accept="image/*">
+            </div>
+            <div class="convert-container">
+                <button id="convert-btn" class="convert-btn button tooltip hidden">
+                    <span class="convert-text">Convert</span>
+                    <span class="tooltiptext-error hidden">No files to convert.</span>
+                </button>
+            </div>
+            <div class="upload-wrap">
+                <div id="img-container"></div>
+            </div>
+            <div id="result"></div>
+        </div>
+    </body>
+</html> 
+
+
+
+
