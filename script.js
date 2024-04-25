@@ -1,3 +1,9 @@
+import copyIconSrc from "./img/copy-w.png";
+import downloadIconSrc from "./img/download-w2.png";
+import expandIconSrc from "./img/expand-arrows-w.png";
+import minimizeIconSrc from "./img/minimize-arrows-w.png";
+import removeIconSrc from "./img/close-w.png";
+
 document.addEventListener('DOMContentLoaded', function() {
 
   const dropArea = document.querySelector('#drop-zone');
@@ -133,8 +139,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // -------------------------------------------------- Convert Image to Text
   async function sendImageToVisionAPI(base64Image, currentImage) {
-    const apiKey = 'AIzaSyBy961yjSr6uq3mQLfJhHsmVUYyScHEt78';
-    const apiUrl = `https://vision.googleapis.com/v1/images:annotate?key=${apiKey}`;
+    // const apiKey = 'QUl6YVN5Qnk5NjF5alNyNnVxM21RTGZKaEhzbVZVWXlTY0hFdDc4';
+    const apiUrl = `https://vision.googleapis.com/v1/images:annotate?key=${atob(process.env.apiKey)}`;
 
     const requestBody = {
       requests: [
@@ -357,7 +363,7 @@ document.addEventListener('DOMContentLoaded', function() {
     copyAll.setAttribute('id', `copy${id}`);
     copyAll.classList.add('copy-btn', 'tooltip');
     const copyImg = document.createElement('img');
-    copyImg.src = 'img/copy-w.png'; 
+    copyImg.src = copyIconSrc; 
     copyImg.alt = 'Copy All'; 
     copyAll.appendChild(copyImg);
     const tooltipCopy = document.createElement('span');
@@ -405,7 +411,7 @@ document.addEventListener('DOMContentLoaded', function() {
     download.setAttribute('id', `dload${id}`);
     download.classList.add('download-btn', 'tooltip');
     const downloadImg = document.createElement('img');
-    downloadImg.src = 'img/download-w2.png'; 
+    downloadImg.src = downloadIconSrc; 
     downloadImg.alt = 'Download Text FIle'; 
     download.appendChild(downloadImg);
     const tooltipDownload = document.createElement('span');
@@ -440,7 +446,7 @@ document.addEventListener('DOMContentLoaded', function() {
     expand.setAttribute('id', `expand${id}`);
     expand.classList.add('expand-btn', 'tooltip');
     const expandImg = document.createElement('img');
-    expandImg.src = 'img/expand-arrows-w.png'; 
+    expandImg.src = expandIconSrc; 
     expandImg.alt = 'Expand'; 
     expand.appendChild(expandImg);
     const tooltipExpand = document.createElement('span');
@@ -465,12 +471,12 @@ document.addEventListener('DOMContentLoaded', function() {
     else if (textarea.style.height === '70px' || textarea.style.height === '') {
       textarea.style.height = 'auto'; 
       textarea.style.height = textarea.scrollHeight + 'px';
-      img.src = 'img/minimize-arrows-w.png'; 
+      img.src = minimizeIconSrc; 
       tooltip.textContent = 'Minimize';
 
     } else {
         textarea.style.height = '70px';
-        img.src = 'img/expand-arrows-w.png'; 
+        img.src = expandIconSrc; 
         tooltip.textContent = 'Expand';
     }
   } 
@@ -482,7 +488,7 @@ document.addEventListener('DOMContentLoaded', function() {
     remove.setAttribute('id', `remove${id}`);
     remove.classList.add('remove-btn', 'tooltip');
     const removeImg = document.createElement('img');
-    removeImg.src = 'img/close-w.png'; 
+    removeImg.src = removeIconSrc; 
     removeImg.alt = 'Remove file'; 
     remove.appendChild(removeImg);
     const tooltip = document.createElement('span');
