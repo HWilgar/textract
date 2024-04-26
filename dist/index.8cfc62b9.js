@@ -1072,6 +1072,7 @@ document.addEventListener("DOMContentLoaded", function() {
         img.src = src;
         img.id = "imageToCrop";
         const container = document.querySelector(".image-to-crop-container");
+        container.addEventListener("touchmove", preventTouchMove);
         container.insertBefore(img, container.firstChild);
         cropModal.style.display = "block";
     }
@@ -1081,10 +1082,14 @@ document.addEventListener("DOMContentLoaded", function() {
         const container = document.querySelector(".image-to-crop-container");
         const image = document.querySelector("#imageToCrop");
         container.removeChild(image);
+        container.removeEventListener("touchmove", preventTouchMove);
     }
     //  Crop Image
     cropArea.addEventListener("touchstart", handleEvent);
     cropArea.addEventListener("mousedown", handleEvent);
+    function preventTouchMove(event) {
+        event.preventDefault();
+    }
     function handleEvent(event) {
         if (event.type.startsWith("touch")) handleTouchEvent(event);
         else if (event.type.startsWith("mouse")) handleMouseEvent(event);
