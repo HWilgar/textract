@@ -128,6 +128,10 @@ document.addEventListener('DOMContentLoaded', function() {
           message.remove();
           imgContent.appendChild(progressBar);
 
+          setTimeout(() => {
+            progress.style.animationPlayState = 'paused';
+        }, 7700);
+
           await sendImageToVisionAPI(imageSrc, id);
       }
     }
@@ -139,7 +143,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   //  Convert Image to Text
   async function sendImageToVisionAPI(base64Image, currentImage) {
-    // const apiKey = 'QUl6YVN5Qnk5NjF5alNyNnVxM21RTGZKaEhzbVZVWXlTY0hFdDc4';
     const apiUrl = `https://vision.googleapis.com/v1/images:annotate?key=${atob(process.env.apiKey)}`;
 
     const requestBody = {
