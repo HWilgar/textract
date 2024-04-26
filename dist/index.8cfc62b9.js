@@ -612,7 +612,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let currentHandle = null;
     let lastClickedDiv = null;
     let unconvertedImages = 0;
-    // -------------------------------------------------- Drop and Drag
+    //  Drop and Drag
     [
         "dragenter",
         "dragover",
@@ -656,7 +656,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     const textarea = document.createElement("textarea");
     const resultDiv = document.querySelector("#result");
-    // -------------------------------------------------- Browse Files
+    //  Browse Files
     document.querySelector("#img-upload").addEventListener("change", function(e) {
         const files = e.target.files;
         const container = document.querySelector("#img-container");
@@ -665,7 +665,7 @@ document.addEventListener("DOMContentLoaded", function() {
             uploadFile(file);
         }
     });
-    // -------------------------------------------------- Upload Files
+    //  Upload Files
     function uploadFile(file) {
         const reader = new FileReader();
         reader.onload = function(e) {
@@ -677,7 +677,7 @@ document.addEventListener("DOMContentLoaded", function() {
         };
         reader.readAsDataURL(file);
     }
-    // -------------------------------------------------- Convert Button  
+    //  Convert Button  
     document.querySelector("#convert-btn").addEventListener("click", async function() {
         const divContainers = document.querySelectorAll(".img-preview");
         const convertBtn = document.querySelector("#convert-btn");
@@ -710,7 +710,7 @@ document.addEventListener("DOMContentLoaded", function() {
         text.textContent = "Convert";
         toggleHide();
     });
-    // -------------------------------------------------- Convert Image to Text
+    //  Convert Image to Text
     async function sendImageToVisionAPI(base64Image, currentImage) {
         // const apiKey = 'QUl6YVN5Qnk5NjF5alNyNnVxM21RTGZKaEhzbVZVWXlTY0hFdDc4';
         const apiUrl = `https://vision.googleapis.com/v1/images:annotate?key=${atob("QUl6YVN5Qnk5NjF5alNyNnVxM21RTGZKaEhzbVZVWXlTY0hFdDc4")}`;
@@ -749,7 +749,7 @@ document.addEventListener("DOMContentLoaded", function() {
             conversionFail(currentImage);
         }
     }
-    // -------------------------------------------------- Create uploaded item entries
+    //  Create uploaded item entries
     function createFileEntry(fileName, fileType, src) {
         const id = Date.now();
         const imgContent = document.createElement("div");
@@ -785,7 +785,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const removeDiv = removeBtn(id);
         imgWrapper.appendChild(removeDiv);
     }
-    // -------------------------------------------------- Check file validity
+    //  Check file validity
     function isValidFile(fileType, preview, imgContent, src, id) {
         const isImage = fileType.startsWith("image/");
         const message = document.createElement("span");
@@ -810,14 +810,14 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         }
     }
-    // -------------------------------------------------- format file name display
+    //  format file name display
     function limitFilename(filename) {
         const lastDotIndex = filename.lastIndexOf(".");
         const firstPart = filename.substring(0, 15);
         const lastPart = filename.length > 10 ? filename.substring(filename.length - 10) : "";
         return firstPart + "..." + lastPart;
     }
-    // -------------------------------------------------- display identifier to selected item
+    //  display identifier to selected item
     function selectedContainer(id) {
         const selectedContainer = document.querySelector(`#container${id}`);
         if (lastClickedDiv && lastClickedDiv !== selectedContainer) lastClickedDiv.classList.toggle("shadow");
@@ -825,7 +825,7 @@ document.addEventListener("DOMContentLoaded", function() {
         selectedContainer.classList.add("shadow");
         lastClickedDiv = selectedContainer;
     }
-    // -------------------------------------------------- Image converted
+    //  Image converted
     function uploadContent(id, content) {
         const img = document.querySelector(`#image${id}`);
         img.setAttribute("converted", "true");
@@ -834,7 +834,7 @@ document.addEventListener("DOMContentLoaded", function() {
         textarea.style.resize = "none";
         return textarea;
     }
-    // -------------------------------------------------- Text Detection Error
+    //  Text Detection Error
     function noTextDetected(id) {
         const img = document.querySelector(`#image${id}`);
         img.setAttribute("converted", "true");
@@ -843,7 +843,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const imgContent = document.querySelector(`#img-content${id}`);
         imgContent.appendChild(errorMsg);
     }
-    // -------------------------------------------------- Conversion Fail Error
+    //  Conversion Fail Error
     function conversionFail(id) {
         const img = document.querySelector(`#image${id}`);
         img.setAttribute("converted", "true");
@@ -854,7 +854,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const progressBar = document.querySelector("#progress-bar" + id);
         progressBar.remove();
     }
-    // -------------------------------------------------- Create items buttons
+    //  Create items buttons
     function contentBoard(id, annotations) {
         const content = annotations[0].description;
         const btnWrap = document.createElement("div");
@@ -876,7 +876,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const removeDiv = remove.parentNode;
         removeDiv.classList.add("move-top");
     }
-    // -------------------------------------------------- Create copy all button
+    //  Create copy all button
     function copyAllBtn(id) {
         const copyAll = document.createElement("button");
         copyAll.setAttribute("name", "copy-btn");
@@ -895,7 +895,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
         return copyAll;
     }
-    // -------------------------------------------------- copy all items
+    //  copy all items
     function copyAllText(id) {
         const text = document.querySelector(`#textarea${id}`).value;
         navigator.clipboard.writeText(text).then(function() {}).catch(function(err) {
@@ -903,7 +903,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
         copiedAnimation(id);
     }
-    // -------------------------------------------------- copied animation
+    //  copied animation
     function copiedAnimation(id) {
         const button = document.querySelector(`#copy${id}`);
         const img = button.querySelector("img");
@@ -917,7 +917,7 @@ document.addEventListener("DOMContentLoaded", function() {
             img.src = "img/copy-w.png";
         }, 1000);
     }
-    // -------------------------------------------------- create download button
+    //  create download button
     function downloadBtn(id) {
         const download = document.createElement("button");
         download.setAttribute("name", "dload-btn");
@@ -936,7 +936,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
         return download;
     }
-    // -------------------------------------------------- create text file for download button
+    //  create text file for download button
     function downloadTextFile(id) {
         const textContent = document.querySelector(`#textarea${id}`).value;
         const blob = new Blob([
@@ -952,7 +952,7 @@ document.addEventListener("DOMContentLoaded", function() {
         a.click();
         window.URL.revokeObjectURL(url);
     }
-    // -------------------------------------------------- create expand button
+    //  create expand button
     function expandBtn(id) {
         const expand = document.createElement("button");
         expand.setAttribute("name", "expand-btn");
@@ -971,7 +971,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
         return expand;
     }
-    // -------------------------------------------------- expanding and minimizing text area
+    //  expanding and minimizing text area
     function expandTextArea(id) {
         const textarea = document.querySelector(`#textarea${id}`);
         const expandMinimizeBtn = document.querySelector(`#expand${id}`);
@@ -989,7 +989,7 @@ document.addEventListener("DOMContentLoaded", function() {
             tooltip.textContent = "Expand";
         }
     }
-    // -------------------------------------------------- create remove button
+    //  create remove button
     function removeBtn(id) {
         const remove = document.createElement("button");
         remove.setAttribute("name", "remove-btn");
@@ -1011,7 +1011,7 @@ document.addEventListener("DOMContentLoaded", function() {
         removeDiv.appendChild(remove);
         return removeDiv;
     }
-    // -------------------------------------------------- remove item
+    //  remove item
     function removeFile(id) {
         const divToRemove = document.querySelector(`#container${id}`);
         const imgDiv = document.querySelector(`#image${id}`);
@@ -1029,7 +1029,7 @@ document.addEventListener("DOMContentLoaded", function() {
         errorMsg.textContent = "";
         toggleHide();
     }
-    // -------------------------------------------------- hide convert button
+    //  hide convert button
     function toggleHide() {
         const convertBtn = document.querySelector(".convert-btn");
         const tooltip = convertBtn.querySelector(".tooltiptext-error");
@@ -1042,7 +1042,7 @@ document.addEventListener("DOMContentLoaded", function() {
             convertBtn.disabled = false;
         }
     }
-    // -------------------------------------------------- How to Use Modal
+    //  How to Use Modal
     howtoButton.addEventListener("click", function() {
         howtoModal.style.display = "block";
     });
@@ -1052,14 +1052,14 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("click", function(event) {
         if (event.target == howtoModal) howtoModal.style.display = "none";
     });
-    // -------------------------------------------------- Crop Modal
+    //  Crop Modal
     closeCropModal.addEventListener("click", function() {
         removeCropImage();
     });
     window.addEventListener("click", function(event) {
         if (event.target == cropModal) removeCropImage();
     });
-    // -------------------------------------------------- Set crop modal
+    //  Set crop modal
     function croppingModal(src) {
         cropArea.style.width = "75%";
         cropArea.style.height = "75%";
@@ -1075,57 +1075,109 @@ document.addEventListener("DOMContentLoaded", function() {
         container.insertBefore(img, container.firstChild);
         cropModal.style.display = "block";
     }
-    // -------------------------------------------------- Reset Crop Modal
+    //  Reset Crop Modal
     function removeCropImage() {
         cropModal.style.display = "none";
         const container = document.querySelector(".image-to-crop-container");
         const image = document.querySelector("#imageToCrop");
         container.removeChild(image);
     }
-    // -------------------------------------------------- Make the crop area movable
-    cropArea.addEventListener("mousedown", function(e) {
-        if (e.target === cropArea) {
+    //  Crop Image
+    cropArea.addEventListener("touchstart", handleEvent);
+    cropArea.addEventListener("mousedown", handleEvent);
+    function handleEvent(event) {
+        if (event.type.startsWith("touch")) handleTouchEvent(event);
+        else if (event.type.startsWith("mouse")) handleMouseEvent(event);
+    }
+    function handleMouseEvent(event) {
+        if (event.target === cropArea) {
             isMoving = true;
-            startX = e.clientX - cropArea.offsetLeft;
-            startY = e.clientY - cropArea.offsetTop;
+            startX = event.clientX - cropArea.offsetLeft;
+            startY = event.clientY - cropArea.offsetTop;
             document.addEventListener("mousemove", moveCropArea);
             document.addEventListener("mouseup", stopMoving);
         }
-    });
-    function moveCropArea(e) {
-        if (isMoving) {
-            const x = e.clientX - startX;
-            const y = e.clientY - startY;
-            cropArea.style.left = x + "px";
-            cropArea.style.top = y + "px";
+    }
+    function handleTouchEvent(event) {
+        if (event.target === cropArea) {
+            isMoving = true;
+            startX = event.touches[0].clientX - cropArea.offsetLeft;
+            startY = event.touches[0].clientY - cropArea.offsetTop;
+            document.addEventListener("touchmove", moveCropArea);
+            document.addEventListener("touchend", stopMoving);
         }
     }
-    function stopMoving() {
-        isMoving = false;
-        document.removeEventListener("mousemove", moveCropArea);
-        document.removeEventListener("mouseup", stopMoving);
+    function moveCropArea(event) {
+        if (event.type.startsWith("touch")) {
+            if (isMoving) {
+                const x = event.touches[0].clientX - startX;
+                const y = event.touches[0].clientY - startY;
+                cropArea.style.left = x + "px";
+                cropArea.style.top = y + "px";
+            }
+        } else if (event.type.startsWith("mouse")) {
+            if (isMoving) {
+                const x = event.clientX - startX;
+                const y = event.clientY - startY;
+                cropArea.style.left = x + "px";
+                cropArea.style.top = y + "px";
+            }
+        }
+    }
+    function stopMoving(event) {
+        if (event.type.startsWith("touch")) {
+            isMoving = false;
+            document.removeEventListener("touchmove", moveCropArea); // Corrected typo
+            document.removeEventListener("touchend", stopMoving); // Corrected typo
+        } else if (event.type.startsWith("mouse")) {
+            isMoving = false;
+            document.removeEventListener("mousemove", moveCropArea);
+            document.removeEventListener("mouseup", stopMoving);
+        }
     }
     resizeHandles.forEach((handle)=>{
-        handle.addEventListener("mousedown", function(e) {
-            isResizing = true;
-            startX = e.clientX;
-            startY = e.clientY;
-            startWidth = cropArea.offsetWidth;
-            startHeight = cropArea.offsetHeight;
-            startLeft = cropArea.offsetLeft;
-            startTop = cropArea.offsetTop;
-            currentHandle = this;
-            document.addEventListener("mousemove", resizeCropArea);
-            document.addEventListener("mouseup", stopResizing);
-        });
+        handle.addEventListener("touchstart", resizeHandleEvent);
+        handle.addEventListener("mousedown", resizeHandleEvent);
+        function resizeHandleEvent(event) {
+            // Check if the event is a touch event
+            if (event.type.startsWith("touch")) {
+                isResizing = true;
+                startX = event.touches[0].clientX;
+                startY = event.touches[0].clientY;
+                startWidth = cropArea.offsetWidth;
+                startHeight = cropArea.offsetHeight;
+                startLeft = cropArea.offsetLeft;
+                startTop = cropArea.offsetTop;
+                currentHandle = this;
+                document.addEventListener("touchmove", resizeCropArea);
+                document.addEventListener("touchend", stopResizing);
+            } else if (event.type.startsWith("mouse")) {
+                isResizing = true;
+                startX = event.clientX;
+                startY = event.clientY;
+                startWidth = cropArea.offsetWidth;
+                startHeight = cropArea.offsetHeight;
+                startLeft = cropArea.offsetLeft;
+                startTop = cropArea.offsetTop;
+                currentHandle = this;
+                document.addEventListener("mousemove", resizeCropArea);
+                document.addEventListener("mouseup", stopResizing);
+            }
+        }
     });
-    function resizeCropArea(e) {
+    function resizeCropArea(event) {
         if (isResizing && currentHandle) {
-            const dx = e.clientX - startX;
-            const dy = e.clientY - startY;
+            let dx;
+            let dy;
             let newWidth = startWidth;
             let newHeight = startHeight;
-            // -------------------------------------------------- Adjust the width and height based on the handle being dragged
+            if (event.type.startsWith("touch")) {
+                dx = event.touches[0].clientX - startX;
+                dy = event.touches[0].clientY - startY;
+            } else if (event.type.startsWith("mouse")) {
+                dx = event.clientX - startX;
+                dy = event.clientY - startY;
+            }
             if (currentHandle.classList.contains("topLeft")) {
                 newWidth = startWidth - dx;
                 newHeight = startHeight - dy;
@@ -1153,37 +1205,44 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
     }
-    function stopResizing() {
-        isResizing = false;
-        currentHandle = null;
-        document.removeEventListener("mousemove", resizeCropArea);
-        document.removeEventListener("mouseup", stopResizing);
+    function stopResizing(event) {
+        if (event.type.startsWith("touch")) {
+            isResizing = false;
+            currentHandle = null;
+            document.removeEventListener("touchmove", resizeCropArea);
+            document.removeEventListener("touchend", stopResizing);
+        } else if (event.type.startsWith("mouse")) {
+            isResizing = false;
+            currentHandle = null;
+            document.removeEventListener("mousemove", resizeCropArea);
+            document.removeEventListener("mouseup", stopResizing);
+        }
     }
-    // -------------------------------------------------- Crop the image when the button is clicked
+    //  Crop the image when the button is clicked
     cropButton.addEventListener("click", function() {
         const image = document.querySelector("#imageToCrop");
         const canvas = document.createElement("canvas");
         const context = canvas.getContext("2d");
-        // -------------------------------------------------- Calculate the scaling factor
+        //  Calculate the scaling factor
         const scaleX = image.naturalWidth / image.offsetWidth;
         const scaleY = image.naturalHeight / image.offsetHeight;
-        // -------------------------------------------------- Adjust the cropping area based on the scaling factor
+        //  Adjust the cropping area based on the scaling factor
         const adjustedCropArea = {
             left: (cropArea.offsetLeft - image.offsetLeft) * scaleX,
             top: (cropArea.offsetTop - image.offsetTop) * scaleY,
             width: cropArea.offsetWidth * scaleX,
             height: cropArea.offsetHeight * scaleY
         };
-        // -------------------------------------------------- Set the canvas dimensions to the adjusted cropped area size
+        //  Set the canvas dimensions to the adjusted cropped area size
         canvas.width = adjustedCropArea.width;
         canvas.height = adjustedCropArea.height;
-        // -------------------------------------------------- Draw the cropped area on the canvas
+        //  Draw the cropped area on the canvas
         context.drawImage(image, adjustedCropArea.left, adjustedCropArea.top, adjustedCropArea.width, adjustedCropArea.height, 0, 0, adjustedCropArea.width, adjustedCropArea.height);
-        // -------------------------------------------------- Convert the canvas to a data URL
+        //  Convert the canvas to a data URL
         const fileName = `Crop${Date.now()}.png`;
         const fileType = "image/png";
         const croppedImageDataURL = canvas.toDataURL("image/png");
-        // -------------------------------------------------- Display the cropped image
+        //  Display the cropped image
         const croppedImage = document.createElement("img");
         croppedImage.src = croppedImageDataURL;
         createFileEntry(fileName, fileType, croppedImageDataURL, container);

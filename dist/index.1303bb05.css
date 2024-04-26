@@ -480,18 +480,21 @@ a:link, a:visited, a:hover {
   border: 1px solid #888;
   border-radius: 20px;
   flex-flow: column;
-  align-items: end;
+  align-items: center;
   width: 50%;
   margin: 8% auto;
   padding: 20px;
   display: flex;
+  position: relative;
 }
 
-.close {
+.close, .close-crop-modal {
   color: #aaa;
   font-size: 28px;
   font-weight: bold;
   position: absolute;
+  top: 10px;
+  right: 20px;
 }
 
 .close:hover, .close:focus {
@@ -627,6 +630,10 @@ ul li {
   display: none;
 }
 
+h4 {
+  margin-bottom: 0;
+}
+
 @media only screen and (width >= 768px) and (width <= 1020px) {
   .container {
     width: 95%;
@@ -635,6 +642,11 @@ ul li {
   .howto-content {
     width: 80%;
     padding: 10px;
+  }
+
+  .close-crop-modal {
+    top: 5px;
+    right: 10px;
   }
 }
 
@@ -676,6 +688,11 @@ ul li {
     width: 80%;
     padding: 10px;
     font-size: .9rem;
+  }
+
+  .close-crop-modal {
+    top: 5px;
+    right: 10px;
   }
 }
 
@@ -749,6 +766,11 @@ ul li {
     width: 80%;
     padding: 10px;
     font-size: .8rem;
+  }
+
+  .close-crop-modal {
+    top: 5px;
+    right: 10px;
   }
 }
 /*# sourceMappingURL=index.1303bb05.css.map */

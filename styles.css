@@ -477,14 +477,17 @@ a:link, a:visited, a:hover {
     border-radius: 20px;
     display: flex;
     flex-flow: column nowrap;
-    align-items: end;
+    align-items: center;
+    position: relative;
 }
 
-.close {
+.close, .close-crop-modal {
     color: #aaa;
     font-size: 28px;
     font-weight: bold;
     position: absolute;
+    right:20px;
+    top: 10px;
 }
 
 .close:hover,
@@ -621,6 +624,10 @@ ul li{
     display: none;
 }
 
+h4{
+    margin-bottom: 0;
+}
+
 @media only screen and (min-width: 768px) and (max-width: 1020px){
     .container{
         width: 95%;
@@ -629,6 +636,11 @@ ul li{
     .howto-content{
         width: 80%;
         padding: 10px;
+    }
+
+    .close-crop-modal{
+        right:10px;
+        top: 5px;
     }
 }
 
@@ -671,6 +683,11 @@ ul li{
         font-size: 0.9rem;
         padding: 10px;
 
+    }
+
+    .close-crop-modal{
+        right:10px;
+        top: 5px;
     }
 }
 
@@ -744,5 +761,10 @@ ul li{
         width: 80%;
         font-size: 0.8rem;
         padding: 10px;
+    }
+
+    .close-crop-modal{
+        right:10px;
+        top: 5px;
     }
 }
