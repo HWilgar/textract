@@ -1,4 +1,4 @@
-5886
+5887
 78C:\Users\PC\Desktop\textract\node_modules\htmlnano\lib\modules\mergeStyles.cjs133585133243667954 0
 75C:\Users\PC\Desktop\textract\node_modules\caniuse-lite\data\features\mp3.js133585133304060687 0
 50C:\Users\PC\Desktop\textract\node_modules\entities133585133246568738 1
@@ -25,7 +25,7 @@
 66C:\Users\PC\Desktop\textract\node_modules\abortcontroller-polyfill133585133243367828 1
 77C:\Users\PC\Desktop\textract\node_modules\svgo\lib\svgo\css-select-adapter.js133585133249705473 0
 70C:\Users\PC\Desktop\textract\node_modules\css-tree\lib\utils\string.js133585133283417442 0
-33C:\Users\PC\Desktop\textract\dist133585813682411060 1
+33C:\Users\PC\Desktop\textract\dist133602187705751769 1
 82C:\Users\PC\Desktop\textract\node_modules\@parcel\diagnostic\test\markdown.test.js133585133232918861 0
 66C:\Users\PC\Desktop\textract\node_modules\weak-lru-cache\README.md133585133238469654 0
 64C:\Users\PC\Desktop\textract\node_modules\semver\functions\eq.js133585133242567774 0
@@ -123,12 +123,12 @@
 103C:\Users\PC\Desktop\textract\node_modules\csso\node_modules\css-tree\lib\definition-syntax\tokenizer.js133585133284480826 0
 50C:\Users\PC\Desktop\textract\node_modules\css-tree133585133287562541 1
 104C:\Users\PC\Desktop\textract\node_modules\@parcel\optimizer-htmlnano\node_modules\mdn-data\l10n\css.json133585133241273482 0
-38C:\Users\PC\Desktop\textract\script.js133585813687936335 0
+38C:\Users\PC\Desktop\textract\script.js133602186318683449 0
 94C:\Users\PC\Desktop\textract\node_modules\dom-serializer\node_modules\entities\lib\decode.d.ts133585133244880037 0
 114C:\Users\PC\Desktop\textract\node_modules\@parcel\source-map\parcel_sourcemap_node\artifacts\index.darwin-x64.node133585133254567666 0
 67C:\Users\PC\Desktop\textract\node_modules\ordered-binary\index.d.ts133585133243367828 0
 62C:\Users\PC\Desktop\textract\node_modules\htmlnano\lib\modules133585133269559390 1
-39C:\Users\PC\Desktop\textract\styles.css133585719211134023 0
+39C:\Users\PC\Desktop\textract\styles.css133602187705267099 0
 79C:\Users\PC\Desktop\textract\node_modules\caniuse-lite\data\features\ch-unit.js133585133268662283 0
 82C:\Users\PC\Desktop\textract\node_modules\csso\cjs\replace\property\background.cjs133585133243168558 0
 70C:\Users\PC\Desktop\textract\node_modules\semver\classes\comparator.js133585133233961405 0
@@ -1988,7 +1988,7 @@
 79C:\Users\PC\Desktop\textract\node_modules\@parcel\transformer-svg\lib\inline.js133585133228933639 0
 66C:\Users\PC\Desktop\textract\node_modules\is-arrayish\package.json133585133219469161 0
 54C:\Users\PC\Desktop\textract\node_modules\lmdb\keys.js133585133271966914 0
-55C:\Users\PC\Desktop\textract\dist\index.8cfc62b9.js.map133585813682391078 0
+55C:\Users\PC\Desktop\textract\dist\index.8cfc62b9.js.map133602186320836523 0
 68C:\Users\PC\Desktop\textract\node_modules\@parcel\graph\src\Graph.js133585133244068419 0
 55C:\Users\PC\Desktop\textract\node_modules\lmdb\level.js133585133272065210 0
 84C:\Users\PC\Desktop\textract\node_modules\css-select\node_modules\domutils\readme.md133585133257965668 0
@@ -2737,7 +2737,7 @@
 73C:\Users\PC\Desktop\textract\node_modules\caniuse-lite\data\regions\CF.js133585133268368911 0
 79C:\Users\PC\Desktop\textract\node_modules\caniuse-lite\data\features\streams.js133585133310700253 0
 83C:\Users\PC\Desktop\textract\node_modules\csso\node_modules\css-tree\lib\version.js133585133286866955 0
-54C:\Users\PC\Desktop\textract\dist\close-w.9885f271.png133585812275805347 0
+54C:\Users\PC\Desktop\textract\dist\close-w.9885f271.png133602185804203976 0
 121C:\Users\PC\Desktop\textract\node_modules\@parcel\optimizer-svgo\node_modules\csso\lib\restructure\prepare\specificity.js133585133255516835 0
 79C:\Users\PC\Desktop\textract\node_modules\csso\node_modules\css-tree\lib\walker133585133278766000 1
 88C:\Users\PC\Desktop\textract\node_modules\csso\node_modules\css-tree\lib\walker\index.js133585133278766000 0
@@ -3203,7 +3203,7 @@
 75C:\Users\PC\Desktop\textract\node_modules\css-tree\lib\syntax\node\Ratio.js133585133282167702 0
 80C:\Users\PC\Desktop\textract\node_modules\css-tree\lib\syntax\node\StyleSheet.js133585133283920064 0
 82C:\Users\PC\Desktop\textract\node_modules\css-tree\lib\syntax\node\TypeSelector.js133585133285703649 0
-44C:\Users\PC\Desktop\textract\dist\index.html133585812279342008 0
+44C:\Users\PC\Desktop\textract\dist\index.html133602185807231199 0
 119C:\Users\PC\Desktop\textract\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\plugins\moveGroupAttrsToElems.js133585133252567347 0
 82C:\Users\PC\Desktop\textract\node_modules\css-tree\lib\syntax\node\UnicodeRange.js133585133285870614 0
 73C:\Users\PC\Desktop\textract\node_modules\css-tree\lib\syntax\node\Url.js133585133286169814 0
@@ -4119,7 +4119,7 @@
 89C:\Users\PC\Desktop\textract\node_modules\@swc\helpers\_\_is_native_function\package.json133585133286642200 0
 84C:\Users\PC\Desktop\textract\node_modules\caniuse-lite\data\features\css3-tabsize.js133585133287466504 0
 84C:\Users\PC\Desktop\textract\node_modules\caniuse-lite\data\features\currentcolor.js133585133287668583 0
-64C:\Users\PC\Desktop\textract\dist\minimize-arrows-w.88bbce01.png133585812277379642 0
+64C:\Users\PC\Desktop\textract\dist\minimize-arrows-w.88bbce01.png133602185806453374 0
 80C:\Users\PC\Desktop\textract\node_modules\caniuse-lite\data\features\datalist.js133585133287972749 0
 79C:\Users\PC\Desktop\textract\node_modules\caniuse-lite\data\features\dataset.js133585133288066591 0
 79C:\Users\PC\Desktop\textract\node_modules\caniuse-lite\data\features\datauri.js133585133288066591 0
@@ -5076,7 +5076,7 @@
 68C:\Users\PC\Desktop\textract\node_modules\@parcel\cache\lib\index.js133585133240871695 0
 84C:\Users\PC\Desktop\textract\node_modules\@parcel\packager-js\lib\CJSOutputFormat.js133585133222768414 0
 84C:\Users\PC\Desktop\textract\node_modules\@parcel\packager-js\lib\ESMOutputFormat.js133585133238984097 0
-62C:\Users\PC\Desktop\textract\dist\expand-arrows-w.ba2026b5.png133585812275805347 0
+62C:\Users\PC\Desktop\textract\dist\expand-arrows-w.ba2026b5.png133602185804203976 0
 90C:\Users\PC\Desktop\textract\node_modules\@parcel\packager-js\lib\ScopeHoistingPackager.js133585133244665840 0
 74C:\Users\PC\Desktop\textract\node_modules\@parcel\packager-js\lib\utils.js133585133245766306 0
 71C:\Users\PC\Desktop\textract\node_modules\@parcel\packager-html\LICENSE133585133220070670 0
@@ -5215,7 +5215,7 @@
 95C:\Users\PC\Desktop\textract\node_modules\@parcel\optimizer-svgo\node_modules\csso\lib\index.js133585133252418701 0
 94C:\Users\PC\Desktop\textract\node_modules\@parcel\optimizer-svgo\node_modules\csso\lib\replace133585133258108973 1
 95C:\Users\PC\Desktop\textract\node_modules\@parcel\optimizer-svgo\node_modules\csso\lib\usage.js133585133257277502 0
-58C:\Users\PC\Desktop\textract\dist\download-w2.dbe84847.png133585812277319644 0
+58C:\Users\PC\Desktop\textract\dist\download-w2.dbe84847.png133602185806441679 0
 123C:\Users\PC\Desktop\textract\node_modules\@parcel\optimizer-svgo\node_modules\csso\lib\restructure\2-initialMergeRuleset.js133585133225117275 0
 106C:\Users\PC\Desktop\textract\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\lexer\search.js133585133270466476 0
 118C:\Users\PC\Desktop\textract\node_modules\@parcel\optimizer-svgo\node_modules\csso\lib\restructure\3-disjoinRuleset.js133585133228218296 0
@@ -5880,8 +5880,9 @@
 53C:\Users\PC\Desktop\textract\dist\copy-w.315905f0.png133585145668607229 0
 52C:\Users\PC\Desktop\textract\dist\index.19c63e65.css133585145679599277 0
 55C:\Users\PC\Desktop\textract\dist\index.8888cba9.js.map133585145679820927 0
-60C:\Users\PC\Desktop\textract\dist\upload-icon-y.d4c1e928.png133585812275805347 0
-53C:\Users\PC\Desktop\textract\dist\copy-w.caf51758.png133585812275805347 0
-52C:\Users\PC\Desktop\textract\dist\index.1303bb05.css133585812279160755 0
-56C:\Users\PC\Desktop\textract\dist\index.1303bb05.css.map133585812279210730 0
-51C:\Users\PC\Desktop\textract\dist\index.8cfc62b9.js133585813682235038 0
+60C:\Users\PC\Desktop\textract\dist\upload-icon-y.d4c1e928.png133602185804203976 0
+53C:\Users\PC\Desktop\textract\dist\copy-w.caf51758.png133602185804203976 0
+53C:\Users\PC\Desktop\textract\dist\tick-w.a264bd65.png133602185804203976 0
+51C:\Users\PC\Desktop\textract\dist\index.8cfc62b9.js133602186320672827 0
+52C:\Users\PC\Desktop\textract\dist\index.1303bb05.css133602187705751769 0
+56C:\Users\PC\Desktop\textract\dist\index.1303bb05.css.map133602187705751769 0

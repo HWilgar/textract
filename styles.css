@@ -491,7 +491,9 @@ a:link, a:visited, a:hover {
 }
 
 .close:hover,
-.close:focus {
+.close:focus,
+.close-crop-modal:hover,
+.close-crop-modal:focus {
     color: #0E0D19;
     text-decoration: none;
     cursor: pointer;
@@ -642,6 +644,10 @@ h4{
         right:10px;
         top: 5px;
     }
+
+    .modal-content{
+        width: 70%;
+    }
 }
 
 @media only screen and (min-width: 560px) and (max-width: 768px){
@@ -688,6 +694,10 @@ h4{
     .close-crop-modal{
         right:10px;
         top: 5px;
+    }
+
+    .modal-content{
+        width: 75%;
     }
 }
 
@@ -766,5 +776,9 @@ h4{
     .close-crop-modal{
         right:10px;
         top: 5px;
+    }
+
+    .modal-content{
+        width: 80%;
     }
 }

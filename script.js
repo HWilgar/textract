@@ -3,6 +3,7 @@ import downloadIconSrc from "./img/download-w2.png";
 import expandIconSrc from "./img/expand-arrows-w.png";
 import minimizeIconSrc from "./img/minimize-arrows-w.png";
 import removeIconSrc from "./img/close-w.png";
+import tickIconSrc from "./img/tick-w.png";
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -400,10 +401,10 @@ document.addEventListener('DOMContentLoaded', function() {
     void img.offsetWidth;
     img.style.animation = 'checkAnimation 0.5s ease-out forwards';
     img.style.display = 'block';
-    img.src = 'img/tick-w.png'; 
+    img.src = tickIconSrc; 
 
     setTimeout(function(id) {
-        img.src = 'img/copy-w.png'; 
+        img.src = copyIconSrc; 
     }, 1000);
   }
 

@@ -595,6 +595,8 @@ var _minimizeArrowsWPng = require("./img/minimize-arrows-w.png");
 var _minimizeArrowsWPngDefault = parcelHelpers.interopDefault(_minimizeArrowsWPng);
 var _closeWPng = require("./img/close-w.png");
 var _closeWPngDefault = parcelHelpers.interopDefault(_closeWPng);
+var _tickWPng = require("./img/tick-w.png");
+var _tickWPngDefault = parcelHelpers.interopDefault(_tickWPng);
 document.addEventListener("DOMContentLoaded", function() {
     const dropArea = document.querySelector("#drop-zone");
     const container = document.querySelector("#img-container");
@@ -914,9 +916,9 @@ document.addEventListener("DOMContentLoaded", function() {
         img.offsetWidth;
         img.style.animation = "checkAnimation 0.5s ease-out forwards";
         img.style.display = "block";
-        img.src = "img/tick-w.png";
+        img.src = (0, _tickWPngDefault.default);
         setTimeout(function(id) {
-            img.src = "img/copy-w.png";
+            img.src = (0, _copyWPngDefault.default);
         }, 1000);
     }
     //  create download button
@@ -1258,7 +1260,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-},{"./img/copy-w.png":"dE3dP","./img/download-w2.png":"bSBk7","./img/expand-arrows-w.png":"gQaSq","./img/minimize-arrows-w.png":"jHHk2","./img/close-w.png":"d8xlR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dE3dP":[function(require,module,exports) {
+},{"./img/copy-w.png":"dE3dP","./img/download-w2.png":"bSBk7","./img/expand-arrows-w.png":"gQaSq","./img/minimize-arrows-w.png":"jHHk2","./img/close-w.png":"d8xlR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./img/tick-w.png":"a2SXI"}],"dE3dP":[function(require,module,exports) {
 module.exports = require("19b54b99ec25e4f4").getBundleURL("fqV6O") + "copy-w.caf51758.png" + "?" + Date.now();
 
 },{"19b54b99ec25e4f4":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -1338,6 +1340,9 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["86oZd","6rimH"], "6rimH", "parcelRequire716c")
+},{}],"a2SXI":[function(require,module,exports) {
+module.exports = require("6ab8341cefdfee6d").getBundleURL("fqV6O") + "tick-w.a264bd65.png" + "?" + Date.now();
+
+},{"6ab8341cefdfee6d":"lgJ39"}]},["86oZd","6rimH"], "6rimH", "parcelRequire716c")
 
 //# sourceMappingURL=index.8cfc62b9.js.map
